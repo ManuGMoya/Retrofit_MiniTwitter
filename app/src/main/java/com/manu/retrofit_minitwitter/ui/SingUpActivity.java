@@ -10,6 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.manu.retrofit_minitwitter.R;
+import com.manu.retrofit_minitwitter.common.Constantes;
+import com.manu.retrofit_minitwitter.common.SharedPreferencesManager;
 import com.manu.retrofit_minitwitter.retrofit.MiniTwitterClient;
 import com.manu.retrofit_minitwitter.retrofit.MiniTwittterService;
 import com.manu.retrofit_minitwitter.retrofit.request.RequestSingup;
@@ -97,6 +99,15 @@ public class SingUpActivity extends AppCompatActivity implements View.OnClickLis
                 @Override
                 public void onResponse(Call<ResponseAuth> call, Response<ResponseAuth> response) {
                     if(response.isSuccessful()){
+
+                        // GUARDAMOS LAS PREFERNCIAS
+                        SharedPreferencesManager.setSomeStringValue(Constantes.PREF_TOKEN,response.body().getToken());
+                        SharedPreferencesManager.setSomeStringValue(Constantes.PREF_USERNAME,response.body().getUsername());
+                        SharedPreferencesManager.setSomeStringValue(Constantes.PREF_EMAIL,response.body().getEmail());
+                        SharedPreferencesManager.setSomeStringValue(Constantes.PREF_PHOTOURL,response.body().getPhotoUrl());
+                        SharedPreferencesManager.setSomeStringValue(Constantes.PREF_CREATED,response.body().getCreated());
+                        SharedPreferencesManager.setSomeBooleanValue(Constantes.PREF_ACTIVE,response.body().getActive());
+
                         Intent i = new Intent(SingUpActivity.this, DashboardActivity.class);
                         startActivity(i);
                         finish();

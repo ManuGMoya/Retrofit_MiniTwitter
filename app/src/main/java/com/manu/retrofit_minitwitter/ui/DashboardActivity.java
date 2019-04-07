@@ -6,8 +6,11 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.manu.retrofit_minitwitter.R;
+import com.manu.retrofit_minitwitter.common.Constantes;
+import com.manu.retrofit_minitwitter.common.SharedPreferencesManager;
 
 public class DashboardActivity extends AppCompatActivity {
 
@@ -41,6 +44,8 @@ public class DashboardActivity extends AppCompatActivity {
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        String token =  SharedPreferencesManager.getSomeStringValue(Constantes.PREF_TOKEN);
     }
 
 }
