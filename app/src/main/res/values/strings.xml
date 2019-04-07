@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Retrofit_MiniTwitter</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="btn_login">Iniciar Sesión</string>
+    <string name="text_create_account">Si aún no tienes cuenta, registrate aquí</string>
+    <string name="text_go_login">Si ya dispone de una cuenta, Inicie sesion aqui.</string>
+    <string name="btn_singup">Registrarme</string>
+    <string name="hint_username">Nombre de Usuario</string>
+</resources>
