@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimary">@color/colorazul</color>
     <color name="colorPrimaryDark">#DDDDDD</color>
     <color name="colorAccent">@color/colorazulDark</color>
     <color name="colorazul">#0F7EDD</color>
 
     <color name="colorazulDark">#0B4480</color>
+    <color name="pink">#e0245e</color>
 
 
 </resources>

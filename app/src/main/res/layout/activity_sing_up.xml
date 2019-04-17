@@ -8,7 +8,7 @@
     tools:context=".ui.MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewLike"
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:layout_marginTop="8dp"
@@ -91,8 +91,8 @@
         android:hint="@string/hint_username"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintEnd_toEndOf="@+id/imageViewLike"
+        app:layout_constraintStart_toStartOf="@+id/imageViewLike"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLike" />
 
 </android.support.constraint.ConstraintLayout>
