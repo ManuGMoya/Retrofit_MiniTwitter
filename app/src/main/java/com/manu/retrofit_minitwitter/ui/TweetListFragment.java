@@ -37,8 +37,6 @@ public class TweetListFragment extends Fragment {
     public TweetListFragment() {
     }
 
-    // TODO: Customize parameter initialization
-    @SuppressWarnings("unused")
     public static TweetListFragment newInstance(int tweetListType) {
         TweetListFragment fragment = new TweetListFragment();
         Bundle args = new Bundle();
